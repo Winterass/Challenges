@@ -1,0 +1,7 @@
+name: Challenges
+version: '1.0-SNAPSHOT'
+main: de.eternalcode.challenges.Challenges
+api-version: '1.21'
+authors: [ Timo ]
+description: A Hide and Seek Fabric Mod for Fuxelbau
+website: eternalcode.de
