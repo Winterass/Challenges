@@ -14,6 +14,9 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
 
+/**
+ * A utility class for building and managing custom inventories.
+ */
 public class InventoryBuilder {
 
     public enum LayoutType {

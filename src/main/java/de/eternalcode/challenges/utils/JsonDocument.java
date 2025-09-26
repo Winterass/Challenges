@@ -8,6 +8,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * A simple Json document wrapper around Google's Gson library.
+ */
 public class JsonDocument {
     private static final Gson gson = (new GsonBuilder()).serializeNulls().setPrettyPrinting().disableHtmlEscaping().create();
     private static final JsonParser parser = new JsonParser();

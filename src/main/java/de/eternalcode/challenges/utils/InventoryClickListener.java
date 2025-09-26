@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * Listener to handle inventory click events for the custom inventories.
+ */
 public class InventoryClickListener implements Listener {
     private static final Map<UUID, InventoryBuilder> openInventories = new HashMap<>();
 

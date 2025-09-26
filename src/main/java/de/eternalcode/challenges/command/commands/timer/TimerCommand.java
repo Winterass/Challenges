@@ -8,6 +8,9 @@ import de.eternalcode.challenges.api.services.TimerService;
 import net.kyori.adventure.text.Component;
 import org.bukkit.command.CommandException;
 
+/**
+ * Command to manage the challenge timer.
+ */
 @CommandInfo(
         name = "timer",
         description = "Manage the challenge timer",

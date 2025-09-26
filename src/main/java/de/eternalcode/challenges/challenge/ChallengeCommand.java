@@ -1,4 +1,4 @@
-package de.eternalcode.challenges.challenge.command;
+package de.eternalcode.challenges.challenge;
 
 import de.eternalcode.challenges.Challenges;
 import de.eternalcode.challenges.api.Challenge;
@@ -16,6 +16,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Collections;
 
+/**
+ * Command to manage the challenges.
+ */
 @CommandInfo(
         name = "challenge",
         description = "Base command for challenge management",
@@ -30,6 +33,8 @@ public class ChallengeCommand extends AbstractBaseCommand {
 
     public ChallengeCommand() {
         this.challengeService = Challenges.getSimpleChallengeService();
+
+        this.child("stop", ChallengeStop(), "eternal.challenge.stop");
     }
 
     @Override
@@ -69,5 +74,19 @@ public class ChallengeCommand extends AbstractBaseCommand {
         }
 
         gui.open(player);
+    }
+
+    private AbstractBaseCommand ChallengeStop() {
+        return new AbstractBaseCommand() {
+            @Override
+            public void execute(CommandContext context) throws CommandException {
+                if (!challengeService.getCurrentChallenge().isRunning()) {
+                    context.getPlayer().sendMessage(Component.text("No challenge is currently active."));
+                } else {
+                    challengeService.stopCurrentChallenge(challengeService.getCurrentChallenge());
+                    context.getPlayer().sendMessage(Component.text("The current challenge has been stopped."));
+                }
+            }
+        };
     }
 }

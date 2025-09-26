@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * A utility class for building ItemStack objects with a fluent interface.
+ */
 public class ItemBuilder {
 
     private final ItemStack item;

@@ -13,6 +13,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.plugin.Plugin;
 
+/**
+ * A challenge that requires players to defeat the Ender Dragon.
+ */
 public class EnderDragonChallenge extends ParentChallenge implements Listener {
 
     public EnderDragonChallenge(Plugin plugin) {

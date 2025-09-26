@@ -8,6 +8,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.plugin.Plugin;
 
+/**
+ * An abstract class representing a abstract Parent Challenge for less Bloat code.
+ */
 public abstract class ParentChallenge implements Challenge {
 
     protected final Plugin plugin;
@@ -39,7 +42,7 @@ public abstract class ParentChallenge implements Challenge {
     public void stop() {
         running = false;
 
-        getTimerService().pause();
+        // getTimerService().pause();
         getTimerService().reset();
 
         Bukkit.broadcast(
